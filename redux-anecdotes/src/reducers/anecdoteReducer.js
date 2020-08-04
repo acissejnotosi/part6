@@ -29,18 +29,33 @@ const reducer = (state = initialState, action) => {
       );
       return newState;
     }
+    case "NEW": {
+      const newState = action.data;
+      return state.concat(newState);
+    }
   }
 
   return state;
 };
 
-export const voteAnecdotes = (anecdotes) => {
+export const voteAnecdote = (anecdote) => {
   return {
     type: "VOTE",
     data: {
-      content: anecdotes.content,
-      id: anecdotes.id,
-      votes: anecdotes.votes + 1,
+      content: anecdote.content,
+      id: anecdote.id,
+      votes: anecdote.votes + 1,
+    },
+  };
+};
+
+export const createAnecdote = (content) => {
+  return {
+    type: "NEW",
+    data: {
+      content,
+      id: getId(),
+      votes: 0,
     },
   };
 };
