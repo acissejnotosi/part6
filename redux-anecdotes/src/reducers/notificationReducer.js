@@ -3,8 +3,10 @@ const initialState = "qualquer coisa";
 const notificationReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SHOW": {
-      console.log(action.data.content);
       return action.data.message;
+    }
+    case "HIDDE": {
+      return "";
     }
     default: {
       return state;
@@ -16,8 +18,14 @@ export const show = (message) => {
   return {
     type: "SHOW",
     data: {
-      message
+      message,
     },
+  };
+};
+
+export const hidde = () => {
+  return {
+    type: "HIDDE",
   };
 };
 
