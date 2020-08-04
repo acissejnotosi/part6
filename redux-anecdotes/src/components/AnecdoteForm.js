@@ -1,9 +1,8 @@
 import React from "react";
 import { createAnecdote } from "../reducers/anecdoteReducer";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const AnecdoteForm = () => {
-  //const anecdotes = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const addAnecdote = (event) => {
@@ -14,12 +13,15 @@ const AnecdoteForm = () => {
   };
 
   return (
-    <form onSubmit={addAnecdote}>
-      <div>
-        <input name="anecdote" />
-      </div>
-      <button type="submit">create</button>
-    </form>
+    <>
+      <h2>create new</h2>
+      <form onSubmit={addAnecdote}>
+        <div>
+          <input name="anecdote" />
+        </div>
+        <button type="submit">create</button>
+      </form>
+    </>
   );
 };
 
