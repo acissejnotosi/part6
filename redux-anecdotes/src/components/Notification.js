@@ -10,7 +10,7 @@ const Notification = () => {
     borderWidth: 1,
   };
 
-  return <div style={style}>{notification}</div>;
+  return <div hidden= {notification == ""} style={style}>{notification}</div>;
 };
 
 export default Notification;
