@@ -3,6 +3,7 @@ import { voteAnecdote } from "../reducers/anecdoteReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { show, hidde } from "../reducers/notificationReducer";
 
+
 const AnecdoteList = () => {
   const anecdotes = useSelector(({anecdotes, filter}) => anecdotes.filter(anecdote => anecdote.content.includes(filter)));
   const dispatch = useDispatch();
