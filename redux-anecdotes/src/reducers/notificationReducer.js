@@ -15,17 +15,20 @@ const notificationReducer = (state = initialState, action) => {
 };
 
 export const show = (message) => {
-  return {
-    type: "SHOW",
-    data: {
-      message,
-    },
-  };
-};
-
-export const hidde = () => {
-  return {
-    type: "HIDDE",
+  return async (dispatch) => {
+    dispatch({
+      type: "SHOW",
+      data: {
+        message,
+      },
+    });
+    setTimeout(
+      () =>
+        dispatch({
+          type: "HIDDE",
+        }),
+      5000
+    );
   };
 };
 
