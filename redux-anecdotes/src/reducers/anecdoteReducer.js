@@ -42,10 +42,13 @@ export const initializeAnecdotes= () => {
 }
 
 export const createAnecdote = (data) => {
-  return {
-    type: "NEW",
-    data,
-  };
+  return async dispatch => {
+    const anecdotes = await anecdoteService.createNew(data);
+    dispatch({
+      type: 'NEW',
+      data: anecdotes,
+    })
+  }
 };
 
 export default anecdoteReducer;

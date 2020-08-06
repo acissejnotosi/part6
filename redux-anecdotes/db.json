@@ -32,18 +32,28 @@
     },
     {
       "content": "teste",
-      "important": false,
-      "id": "B89FL5T"
+      "votes": 0,
+      "id": "IOEbWLL"
     },
     {
-      "content": "teste",
-      "important": false,
-      "id": "DV_GgAT"
+      "content": "teste2",
+      "votes": 0,
+      "id": "WDji41X"
     },
     {
-      "content": "dfsdf",
-      "important": false,
-      "id": "e0xP5lY"
+      "content": "teste 3",
+      "votes": 0,
+      "id": "uR4W8US"
+    },
+    {
+      "content": "teste 4",
+      "votes": 0,
+      "id": "3BaF8vA"
+    },
+    {
+      "content": "adasd",
+      "votes": 0,
+      "id": "4wyUcxz"
     }
   ]
 }
