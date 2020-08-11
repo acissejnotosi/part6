@@ -1,5 +1,7 @@
 const initialState = "";
 
+var timeoutID;
+
 const notificationReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SHOW": {
@@ -16,13 +18,14 @@ const notificationReducer = (state = initialState, action) => {
 
 export const show = (message) => {
   return async (dispatch) => {
+    clearTimeout(timeoutID);
     dispatch({
       type: "SHOW",
       data: {
         message,
       },
     });
-    setTimeout(
+    timeoutID = setTimeout(
       () =>
         dispatch({
           type: "HIDDE",
